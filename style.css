@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #9b59b6;
+}
+.calculator {
+    position: relative;
+    width: 400px;
+    min-height: 630px;
+    margin: 10px auto;
+}
+.numkeys {
+    width: 300px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px;
+}
+.numkeys__cell {
+    font-size: 35px;
+    border: 1px solid #f7f1e3;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    cursor: pointer;
+    line-height: 100px;
+    text-align: center;
+
+      -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+.numkeys__cell--dark {
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+.numkeys__cell--light {
+    background: white;
+    color: #7f8c8d;   
+}
+.screen {
+    width: 400px;
+    height: 130px;
+    position: relative;
+}
+.screen--light {
+    background: #fff;
+}
+.screen--dark {
+    background: #2c3e50;
+}
+.screen__input {
+    font-size: 15px;
+    text-align: right;
+    position: absolute;
+    bottom: 70px;
+    right: 15px;
+    color: #bdc3c7;
+    width: 320px;
+    overflow: hidden;
+}
+.screen__output {
+    font-size: 40px;
+    text-align: right;
+    height: 50px;
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+    width: 320px;
+    overflow: auto;
+}
+.screen__output--dark {
+    color: #ecf0f1;
+}
+.top-space {
+    height: 100px;
+    width: 400px;
+}
+.functionkeys {
+    height: 100px;
+    width: 100px;
+    float: left;
+    font-size: 20px;
+}
+.functionkeys--light {
+    background: #bdc3c7;
+    color: #2c3e50;
+}
+.functionkeys--dark {
+    background: #7f8c8d;
+    color: #ecf0f1;
+}
+.join-numkeys {
+    position: absolute;
+    bottom: 0;
+}
+.join-numkeys--left {
+    left: 100px;
+}
+.join-numkeys--right {
+    left: 200px;
+}
+.operatorKeys {
+    position: absolute;
+    height: 500px;
+    width: 100px;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 100px 100px 100px 100px 100px;
+}
+.join-functionkeys {
+    position: absolute;
+    right: 100px;
+}
+.lightBtnBlock {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.lightBtnBlock__btn {
+    font-size: 27px;
+    background: #bdc3c7;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    color: #7f8c8d;
+}
+.equalkeys {
+    background: #2ecc71;
+    color: #ecf0f1;
+}
