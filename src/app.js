@@ -380,7 +380,8 @@ class Calculator extends React.Component {
 	}
 	onAcClick() {
 		this.setState({
-			input: ''
+			input: '',
+			output: ''
 		});
 	}
 	onPlusMinusClick() {

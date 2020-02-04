@@ -533,7 +533,8 @@ var Calculator = function (_React$Component6) {
 		key: 'onAcClick',
 		value: function onAcClick() {
 			this.setState({
-				input: ''
+				input: '',
+				output: ''
 			});
 		}
 	}, {
