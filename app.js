@@ -561,12 +561,6 @@ var Calculator = function (_React$Component6) {
 		value: function onEqualClick() {
 			var input = this.state.input;
 
-			var firstPriorityRegex = /[+\-]\s(\d+\,?\.?\d*)(\s[×÷]\s(\d+\,?\.?\d*))+/g;
-			var firstPriorities = input.match(firstPriorityRegex);
-			var firstPriorityResults = this.calcFirstPriority(firstPriorities);
-
-			console.log(firstPriorityResults);
-
 			var trickyInput = ''; //to match regex easier
 			if (input[0] != ' ') {
 				//mean not have +/- at begin
@@ -574,6 +568,10 @@ var Calculator = function (_React$Component6) {
 			} else {
 				trickyInput = input + ' + ';
 			}
+
+			var firstPriorityRegex = /[+\-]\s(\d+\,?\.?\d*)(\s[×÷]\s(\d+\,?\.?\d*))+/g;
+			var firstPriorities = trickyInput.match(firstPriorityRegex);
+			var firstPriorityResults = this.calcFirstPriority(firstPriorities);
 
 			var remainNums = this.calcFirstPriority(trickyInput.match(/[+\-]\s(\d+\,?\.?\d*)+(?=\s[+\-])/g));
 			console.log(remainNums);
