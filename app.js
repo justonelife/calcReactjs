@@ -460,7 +460,9 @@ var Calculator = function (_React$Component6) {
 	_createClass(Calculator, [{
 		key: 'onNumkeysClick',
 		value: function onNumkeysClick(e) {
-			var noFormatInput = this.state.input.match(' 0') == undefined ? this.state.input + e.target.textContent : this.state.input.slice(0, this.state.input.length - 1) + e.target.textContent; //relate format noSequence0
+			var noFormatInput = this.state.input.match(' 0') == undefined ? this.state.input + e.target.textContent : this.state.input.slice(0, this.state.input.length) + e.target.textContent; //relate format noSequence0
+
+			// console.log(this.state.input.slice(0, this.state.input.length));
 
 			var noCommas = noFormatInput.replace(/\,/g, '');
 			var noSequence0Level1 = noCommas.replace(/^0+$/g, '0'); //prevent sequence of 0 at beginning

@@ -318,7 +318,9 @@ class Calculator extends React.Component {
 	onNumkeysClick(e) {
 		let noFormatInput = this.state.input.match(' 0') == undefined ?
 			this.state.input + e.target.textContent :
-			this.state.input.slice(0, this.state.input.length - 1) + e.target.textContent;//relate format noSequence0
+			this.state.input.slice(0, this.state.input.length) + e.target.textContent;//relate format noSequence0
+
+		// console.log(this.state.input.slice(0, this.state.input.length));
 
 		let noCommas = noFormatInput.replace(/\,/g,'');
 		let noSequence0Level1 = noCommas.replace(/^0+$/g, '0'); //prevent sequence of 0 at beginning
